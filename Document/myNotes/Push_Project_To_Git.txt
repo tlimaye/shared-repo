@@ -1,0 +1,27 @@
+#To push project in to GITHUB
+
+Go inside root directory
+
+$ git add .
+
+$ git commit -m "<Add message here>"
+
+$ git remote add originalShared https://github.com/tlimaye/shared-repo.git
+
+$ git remote -v
+	origin  https://github.com/jmcooper/ng2-fundamentals.git (fetch)
+	origin  https://github.com/jmcooper/ng2-fundamentals.git (push)
+	originalShared  https://github.com/tlimaye/shared-repo.git (fetch)
+	originalShared  https://github.com/tlimaye/shared-repo.git (push)
+
+$ git push originalShared master
+	Counting objects: 161, done.
+	Delta compression using up to 4 threads.
+	Compressing objects: 100% (82/82), done.
+	Writing objects: 100% (161/161), 186.81 KiB | 0 bytes/s, done.
+	Total 161 (delta 76), reused 136 (delta 72)
+	remote: Resolving deltas: 100% (76/76), done.
+	error: waitpid for send-pack failed: No child processes
+	To https://github.com/tlimaye/shared-repo.git
+	 * [new branch]      master -> master$
+

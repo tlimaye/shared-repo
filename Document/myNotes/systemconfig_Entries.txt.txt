@@ -1,0 +1,3 @@
+'tslib': 'npm:tslib/tslib.js',
+'@angular/common/http':
+'npm:@angular/common/bundles/common-http.umd.js',

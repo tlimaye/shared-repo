@@ -1,0 +1,146 @@
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code
+$ cd /d/tejas/Angular-211117/code/
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code
+$ pw
+dbash: pw: command not found
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code
+$ pwd
+/d/tejas/Angular-211117/code
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code
+$
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code
+$ git --version
+git version 2.9.0.windows.1
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code
+$ git init local-repo
+Initialized empty Git repository in D:/tejas/Angular-211117/code/local-repo/.git/
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code
+$ git init shared-repo.git --bare
+Initialized empty Git repository in D:/tejas/Angular-211117/code/shared-repo.git/
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code
+$ pwd
+/d/tejas/Angular-211117/code
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code
+$ cd local-repo/
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code/local-repo (master)
+$ git status
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code/local-repo (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code/local-repo (master)
+$ git branch
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code/local-repo (master)
+$ notepad sample.txt
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code/local-repo (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        sample.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code/local-repo (master)
+$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code/local-repo (master)
+$ git add sample.txt
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code/local-repo (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   sample.txt
+
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code/local-repo (master)
+$ git commit -m "Initial commit"
+[master (root-commit) 69b496e] Initial commit
+ Committer: Limaye <tejas.limaye@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 sample.txt
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code/local-repo (master)
+$ git log
+commit 69b496edff08123a791d9d70fe154591f5831448
+Author: Limaye <tejas.limaye@capgemini.com>
+Date:   Tue Nov 21 15:59:10 2017 +0530
+
+    Initial commit
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code/local-repo (master)
+$
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code/local-repo (master)
+$ git remote add original https://github.com/tlimaye/angular-repo.git
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code/local-repo (master)
+$ git push -u original master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 235 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+error: waitpid for send-pack failed: No child processes
+To https://github.com/tlimaye/angular-repo.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from original.
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code/local-repo (master)
+$ pwd
+/d/tejas/Angular-211117/code/local-repo
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code/local-repo (master)
+$ cd ..
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code
+$ git clone https://github.com/jmcooper/ng2-fundamentals.git
+Cloning into 'ng2-fundamentals'...
+remote: Counting objects: 567, done.
+-reused 567
+Receiving objects: 100% (567/567), 191.80 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (315/315), done.
+error: waitpid for fetch-pack failed: No child processes
+
+tlimaye@DIN52003364B MINGW64 /d/tejas/Angular-211117/code
+$
